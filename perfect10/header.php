@@ -94,7 +94,7 @@ $logo_id = get_theme_mod( 'custom_logo' );
 			$drawer_items = p10_drawer_items();
 			foreach ( $drawer_items as $i => $item ) :
 				?>
-				<li>
+				<li<?php echo ! empty( $item['child'] ) ? ' class="p10-drawer__subitem"' : ''; ?>>
 					<a href="<?php echo esc_url( $item['url'] ); ?>" data-num="<?php echo esc_attr( p10_number( $i + 1 ) ); ?>">
 						<?php echo esc_html( $item['label'] ); ?>
 					</a>

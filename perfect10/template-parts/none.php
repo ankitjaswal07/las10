@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		}
 		?>
 	</p>
-	<div style="display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;margin-top:1.8rem">
+	<div style="display:flex;flex-wrap:wrap;gap:calc(var(--p10-fluid-space) * 0.85);justify-content:center;margin-top:calc(var(--p10-fluid-space) * 1.8)">
 		<a class="p10-btn p10-btn--gold" href="<?php echo esc_url( p10_directory_url() ); ?>">
 			<?php esc_html_e( 'Full directory', 'perfect10' ); ?>
 		</a>

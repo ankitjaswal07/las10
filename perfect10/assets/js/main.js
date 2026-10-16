@@ -76,6 +76,7 @@
     function setOpen(open) {
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       drawer.classList.toggle('is-open', open);
+      drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
       document.body.classList.toggle('p10-drawer-open', open);
       root.style.overflow = open ? 'hidden' : '';
     }
@@ -85,8 +86,40 @@
     });
 
     on(document, 'keydown', function (e) {
-      if (e.key === 'Escape' && drawer.classList.contains('is-open')) setOpen(false);
+      if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+        setOpen(false);
+        burger.focus();
+      }
     });
+
+    // Keep real menu labels inside the fluid header. Never remove links or
+    // shrink their type to make them fit; reuse the existing drawer instead.
+    var header = burger.closest('.p10-header');
+    var inner = header && header.querySelector('.p10-header__inner');
+    var nav = header && header.querySelector('.p10-nav');
+    var list = nav && nav.querySelector('.p10-nav__list');
+    var brand = header && header.querySelector('.p10-brand');
+    var actions = header && header.querySelector('.p10-header__actions');
+    function updateLayout() {
+      if (!inner || !nav || !list || !brand || !actions) return;
+      document.body.classList.remove('p10-compact-nav');
+      if (window.getComputedStyle(nav).display === 'none') return; // CSS mobile breakpoint.
+      var style = window.getComputedStyle(inner);
+      var required = brand.getBoundingClientRect().width + list.scrollWidth +
+        actions.getBoundingClientRect().width + (parseFloat(style.columnGap) || 0) * 2 +
+        (parseFloat(style.paddingLeft) || 0) + (parseFloat(style.paddingRight) || 0);
+      var compact = required > inner.clientWidth;
+      document.body.classList.toggle('p10-compact-nav', compact);
+      // Resizing from the drawer to a fitting desktop menu must unlock page scrolling.
+      if (!compact) setOpen(false);
+    }
+    var layoutFrame;
+    on(window, 'resize', function () {
+      window.cancelAnimationFrame(layoutFrame);
+      layoutFrame = window.requestAnimationFrame(updateLayout);
+    });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(updateLayout);
+    updateLayout();
 
     // Close after navigating.
     all('a', drawer).forEach(function (link) {

@@ -1,6 +1,6 @@
 # Las10s / Perfect 10 WordPress theme upgrade
 
-The existing theme is in [`perfect10/`](perfect10/), version **1.1.0**. Work is on **arena/5cd1cd5f-las10**. The original ZIP and two WordPress exports are retained.
+The existing theme is in [`perfect10/`](perfect10/), version **1.1.1**. Work is on **arena/5cd1cd5f-las10**. The original ZIP and two WordPress exports are retained.
 
 ## Start here
 
@@ -8,8 +8,12 @@ The existing theme is in [`perfect10/`](perfect10/), version **1.1.0**. Work is 
 - [Source inventory: all 42 published profiles, 2 excluded drafts, 240 attachment records](docs/SOURCE-INVENTORY.md)
 - [Testing, evidence and known limitations](docs/TESTING.md)
 - [Disposable import mapping/outcomes — not a production import](docs/DISPOSABLE-IMPORT-REPORT.json)
-- Installable theme: `deliverables/perfect10-las10-upgrade-1.1.0.zip`
+- Installable theme: `deliverables/perfect10-las10-upgrade-1.1.1.zip`
 - Pre-edit source backup: `backups/las10-before-upgrade.tar.gz`
+
+## Responsive layout update
+
+Theme containers now have a **97vw maximum** on all breakpoints, without the old desktop pixel caps. Theme-owned fonts, margins, padding and gaps use bounded viewport-based scales. See [layout details and browser evidence](docs/RESPONSIVE-LAYOUT.md). No pull request has been created.
 
 ## Important boundaries
 

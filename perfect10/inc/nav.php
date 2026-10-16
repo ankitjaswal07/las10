@@ -153,12 +153,11 @@ function p10_drawer_items() {
 			if ( $menu_items ) {
 				$items = array();
 				foreach ( $menu_items as $menu_item ) {
-					if ( ! empty( $menu_item->menu_item_parent ) ) {
-						continue;
-					}
+					// All submenu destinations stay reachable when a crowded header uses the drawer.
 					$items[] = array(
 						'label' => $menu_item->title,
 						'url'   => $menu_item->url,
+						'child' => ! empty( $menu_item->menu_item_parent ),
 					);
 				}
 				if ( $items ) {

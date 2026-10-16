@@ -222,8 +222,8 @@ function p10_customizer_schema() {
 				'footer_text_color' => array( 'type' => 'color', 'label' => __( 'Footer text', 'perfect10' ), 'default' => '#a9a49a' ),
 				'footer_link_color' => array( 'type' => 'color', 'label' => __( 'Footer links', 'perfect10' ), 'default' => '#d7d1c5' ),
 				'footer_accent_color' => array( 'type' => 'color', 'label' => __( 'Footer headings / accent', 'perfect10' ), 'default' => '#d4af37' ),
-				'footer_top_padding' => array( 'type' => 'range', 'label' => __( 'Footer top spacing (px)', 'perfect10' ), 'default' => 48, 'min' => 16, 'max' => 120 ),
-				'footer_bottom_padding' => array( 'type' => 'range', 'label' => __( 'Footer bottom spacing (px)', 'perfect10' ), 'default' => 24, 'min' => 8, 'max' => 80 ),
+				'footer_top_padding' => array( 'type' => 'range', 'label' => __( 'Footer top spacing (base px at 1440px; fluid)', 'perfect10' ), 'default' => 48, 'min' => 16, 'max' => 120 ),
+				'footer_bottom_padding' => array( 'type' => 'range', 'label' => __( 'Footer bottom spacing (base px at 1440px; fluid)', 'perfect10' ), 'default' => 24, 'min' => 8, 'max' => 80 ),
 				'footer_mark_size' => array( 'type' => 'range', 'label' => __( 'Watermark size (vw)', 'perfect10' ), 'default' => 15, 'min' => 5, 'max' => 20 ),
 			),
 		),
@@ -493,8 +493,8 @@ function p10_custom_colors() {
 	echo '--p10-hero-overlay:' . esc_attr( $overlay / 100 ) . ';';
 	echo '--p10-marquee-duration:' . esc_attr( $speed ) . 's;';
 	echo '--p10-grid-columns:' . esc_attr( $columns ? $columns : 3 ) . ';';
-	echo '--p10-footer-top-padding:' . esc_attr( max( 16, min( 120, $footer_top ) ) ) . 'px;';
-	echo '--p10-footer-bottom-padding:' . esc_attr( max( 8, min( 80, $footer_bottom ) ) ) . 'px;';
+	echo '--p10-footer-top-padding:calc(var(--p10-fluid-space) * ' . esc_attr( max( 16, min( 120, $footer_top ) ) / 16 ) . ');';
+	echo '--p10-footer-bottom-padding:calc(var(--p10-fluid-space) * ' . esc_attr( max( 8, min( 80, $footer_bottom ) ) / 16 ) . ');';
 	echo '--p10-footer-mark-size:' . esc_attr( max( 5, min( 20, $footer_mark_size ) ) ) . 'vw;';
 	echo '}</style>' . "\n";
 }

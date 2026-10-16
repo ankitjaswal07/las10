@@ -217,9 +217,9 @@ $form_action = $is_tax_view ? p10_directory_url() : strtok( p10_current_url(), '
 						</output>
 					</div>
 
-					<div class="p10-range" style="margin-top:1.2rem">
+					<div class="p10-range" style="margin-top:calc(var(--p10-fluid-space) * 1.2)">
 						<label class="p10-field__label" for="p10-filter-min-age"><?php esc_html_e( 'Age range', 'perfect10' ); ?></label>
-						<div style="display:flex;gap:.6rem;align-items:center">
+						<div style="display:flex;gap:calc(var(--p10-fluid-space) * 0.6);align-items:center">
 							<input class="p10-input" type="number" id="p10-filter-min-age" name="min_age" min="18" max="99"
 								placeholder="18" value="<?php echo esc_attr( $state['min_age'] ); ?>" style="width:50%">
 							<span aria-hidden="true" style="color:var(--p10-muted-2)">–</span>
@@ -228,7 +228,7 @@ $form_action = $is_tax_view ? p10_directory_url() : strtok( p10_current_url(), '
 						</div>
 					</div>
 
-					<div class="p10-range" style="margin-top:1.2rem">
+					<div class="p10-range" style="margin-top:calc(var(--p10-fluid-space) * 1.2)">
 						<label class="p10-field__label" for="p10-filter-q"><?php esc_html_e( 'Search', 'perfect10' ); ?></label>
 						<input class="p10-input" type="search" id="p10-filter-q" name="q"
 							placeholder="<?php esc_attr_e( 'Name, city…', 'perfect10' ); ?>"
@@ -248,7 +248,7 @@ $form_action = $is_tax_view ? p10_directory_url() : strtok( p10_current_url(), '
 			</form>
 
 			<?php if ( is_active_sidebar( 'p10-directory' ) ) : ?>
-				<div class="p10-filters" style="margin-top:1.2rem"><?php dynamic_sidebar( 'p10-directory' ); ?></div>
+				<div class="p10-filters" style="margin-top:calc(var(--p10-fluid-space) * 1.2)"><?php dynamic_sidebar( 'p10-directory' ); ?></div>
 			<?php endif; ?>
 		</aside>
 	<?php endif; ?>

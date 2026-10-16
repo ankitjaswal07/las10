@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'P10_VERSION', '1.1.0' );
+define( 'P10_VERSION', '1.1.1' );
 define( 'P10_DIR', trailingslashit( get_template_directory() ) );
 define( 'P10_URI', trailingslashit( get_template_directory_uri() ) );
 

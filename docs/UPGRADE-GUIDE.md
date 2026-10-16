@@ -1,8 +1,10 @@
 # Las10s / Perfect 10 upgrade — review and staging guide
 
-Date: **2026-10-17 (Asia/Calcutta)**. Branch: **arena/5cd1cd5f-las10**. Theme: **1.1.0**.
+Date: **2026-10-17 (Asia/Calcutta)**. Branch: **arena/5cd1cd5f-las10**. Theme: **1.1.1**.
 
 This is an upgrade of the supplied classic theme, **not a replacement design**. Do not treat this as a verified production migration, fully editable homepage, or completed source-gallery import.
+
+The 1.1.1 responsive follow-up adds 97vw shells, bounded viewport-based typography/spacing, and fit-driven header navigation. See [RESPONSIVE-LAYOUT.md](RESPONSIVE-LAYOUT.md) for implementation, browser evidence and rollback details.
 
 ## 1. Audit and backups
 
@@ -35,7 +37,7 @@ See [SOURCE-INVENTORY.md](SOURCE-INVENTORY.md) for **all 44 profile rows and all
 ## 2. Install and safe import
 
 1. Back up **the target database, theme, uploads and configuration**; verify recovery on staging. Record existing page IDs/slugs, active templates, menus, Customizer options, SEO plugin and rewrite settings.
-2. Install `deliverables/perfect10-las10-upgrade-1.1.0.zip` (directory `perfect10/`) on **staging**, not directly on production. No core/Elementor plugin files are included or modified.
+2. Install `deliverables/perfect10-las10-upgrade-1.1.1.zip` (directory `perfect10/`) on **staging**, not directly on production. No core/Elementor plugin files are included or modified.
 3. Review the inventory, missing fields, conflicting metadata and rights basis. Do **not** run the original **Perfect 10 → Setup & Import** sample-site importer for the source migration. It is a separate legacy workflow that can configure sample homepage/menu settings. Its stock-media fetching is now off by default; the existing `p10_demo_fetch_remote` filter can opt in after license review.
 4. Use **Appearance → Authorized Source Import** as an administrator. Confirm reuse authorization. Each click processes **5 profiles** or **10 assets**. Continue until all cursors are processed (9 profile batches + 24 media batches). The action uses capability checks and an admin nonce. A lock prevents concurrent batches; interrupted locks expire after five minutes (a retry clears a stale lock, then the next request can acquire it).
 5. Drafts are always excluded from public import. Importing them as drafts would require a separate explicit change/request; there is no accidental “publish drafts” toggle.
@@ -135,7 +137,7 @@ Still required on the actual staging site: install packaged Elementor Free and t
 
 ## 6. Deliverables / modified-file summary
 
-- Updated existing theme source: `perfect10/`; installable ZIP: `deliverables/perfect10-las10-upgrade-1.1.0.zip`.
+- Updated existing theme source: `perfect10/`; installable ZIP: `deliverables/perfect10-las10-upgrade-1.1.1.zip`.
 - New modules: `inc/elementor.php`, four `inc/elementor/class-p10-elementor-*.php` widgets/base; full-width and internal conditional bridge templates; `inc/source-import.php`; minimized source manifest; `inc/chatbot.php`; scoped chat CSS/JS.
 - Existing edits: bootstrap/version/lazy location load; header/footer conditional locations; homepage content insertion; unknown-availability schema/label; administrator-only enquiry capabilities; source SEO preservation; labelled missing-photo placeholders; small scoped editor/grid styles; floating concierge markup; legacy remote-demo-images default off.
 - No generic theme, new generated homepage, production content deletion, core/plugin edits, API keys, external source photos, or theme runtime dependencies were added.

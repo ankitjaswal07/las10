@@ -75,3 +75,7 @@ Coding standard command used the new module/template paths with `--standard=Word
 - Full manual keyboard/screen-reader/accessibility evaluation, full design/imagery/font comparison, all legacy menus/forms/gallery/filter regressions, performance/load/atomic rate limiting and CDN-cache behavior.
 - Live source/destination HTTP status, redirects and canonical/SEO comparison. Only mapped path strings were compared here.
 - Legal content/media permission, provider terms and privacy/retention review. No automatic deletion policy is implemented.
+
+## Responsive follow-up (theme 1.1.1)
+
+See [RESPONSIVE-LAYOUT.md](RESPONSIVE-LAYOUT.md) for the 97vw update, bounded viewport-based typography/spacing, 53 browser layout cases across 13 viewport widths, drawer behavior, and regression evidence. This supplements rather than replaces the earlier importer/Elementor/chatbot evidence. Existing production/Elementor/voice/provider limitations still apply.

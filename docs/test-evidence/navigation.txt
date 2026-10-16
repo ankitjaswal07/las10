@@ -1,0 +1,3 @@
+PASS: 390px drawer preserves links, fits viewport, updates ARIA and restores focus on Escape
+PASS: 1440px drawer preserves links, fits viewport, updates ARIA and restores focus on Escape
+PASS: resizing to a fitting desktop menu closes the drawer and unlocks scrolling
