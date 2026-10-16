@@ -1,0 +1,30 @@
+/* Critical above-the-fold CSS: header, hero shell and the first rule.
+   Inlined by p10_critical_css() so the hero paints before main.css arrives. */
+.p10-theme{background:#0b0a09;color:#f5f0e6;font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.65;font-weight:300;margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.p10-theme *,.p10-theme *::before,.p10-theme *::after{box-sizing:border-box}
+.p10-header{position:fixed;inset:0 0 auto 0;z-index:90;height:76px;display:flex;align-items:center;border-bottom:1px solid transparent}
+.p10-header::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,10,9,.82),rgba(11,10,9,0))}
+.p10-header__inner{display:flex;align-items:center;gap:clamp(1rem,3vw,3rem);width:100%;max-width:1560px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,3.5rem)}
+.p10-brand{display:flex;align-items:baseline;gap:.7rem;margin-right:auto}
+.p10-brand__name{font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.15rem,2vw,1.5rem);font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1;color:#f5f0e6}
+.p10-brand__name span{color:#d4af37}
+.p10-brand__sub{font-family:"Jost","Inter",sans-serif;font-size:.625rem;letter-spacing:.2em;text-transform:uppercase;color:#9c9484;padding-left:.7rem;border-left:1px solid rgba(212,175,55,.16)}
+.p10-hero{position:relative;min-height:100svh;display:flex;align-items:center;isolation:isolate;overflow:hidden;padding:140px 0 3rem}
+.p10-hero__media{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.p10-hero__img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.06);filter:saturate(.82) contrast(1.06)}
+.p10-hero__scrim{position:absolute;inset:0;z-index:-1;background:radial-gradient(120% 90% at 18% 42%,rgba(11,10,9,.62) 0,rgba(11,10,9,.42) 52%,rgba(11,10,9,.86) 100%),linear-gradient(180deg,rgba(11,10,9,.92) 0,rgba(11,10,9,.15) 26%,rgba(11,10,9,.55) 72%,#0b0a09 100%)}
+.p10-hero__inner{position:relative;width:100%;max-width:1280px;margin-inline:auto;padding-inline:clamp(1.25rem,4vw,3.5rem)}
+.p10-hero__eyebrow{display:inline-flex;align-items:center;gap:.8rem;margin-bottom:1.6rem;padding:.42rem 1rem .42rem .55rem;border:1px solid rgba(212,175,55,.16);border-radius:100px;background:rgba(11,10,9,.42);font-family:"Jost","Inter",sans-serif;font-size:.625rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:#e9d9a6}
+.p10-hero__eyebrow::before{content:"◆";font-size:.6em;color:#d4af37}
+.p10-hero__title{font-family:"Playfair Display",Georgia,serif;font-size:clamp(3rem,9.4vw,7.4rem);font-weight:500;line-height:.94;letter-spacing:-.032em;margin:0 0 1.4rem;max-width:15ch}
+.p10-hero__title em{display:inline-block;font-style:italic;color:transparent;background:linear-gradient(104deg,#f7ecc4,#d4af37 46%,#b8912f 78%,#f0dca0);-webkit-background-clip:text;background-clip:text}
+.p10-hero__tagline{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin:0 0 1.5rem;font-family:"Jost","Inter",sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:#d4af37}
+.p10-hero__copy{max-width:56ch;margin-bottom:2.4rem;font-size:clamp(.95rem,1.2vw,1.0625rem);line-height:1.8;color:rgba(245,240,230,.74)}
+.p10-hero__cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.p10-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 2rem;border:1px solid rgba(212,175,55,.16);border-radius:2px;background:transparent;color:#f5f0e6;font-family:"Jost","Inter",sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;line-height:1;cursor:pointer;text-decoration:none}
+.p10-btn--gold{background:linear-gradient(135deg,#f0dc9b,#d4af37 42%,#a8842a);border-color:transparent;color:#0b0a09;font-weight:600}
+.p10-btn--ghost{border-color:rgba(245,240,230,.28)}
+.p10-agegate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:1.25rem}
+.p10-agegate__scrim{position:absolute;inset:0;background:rgba(6,5,4,.9);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.p10-agegate__panel{position:relative;width:min(520px,100%);padding:clamp(2rem,5vw,3.2rem);text-align:center;border:1px solid rgba(212,175,55,.16);border-radius:4px;background:radial-gradient(90% 70% at 50% 0,rgba(212,175,55,.12),transparent 62%),linear-gradient(180deg,#16130e,#0c0b09)}
+.p10-agegate-open{overflow:hidden}
