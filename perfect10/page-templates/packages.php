@@ -44,7 +44,7 @@ while ( have_posts() ) :
 			<?php endif; ?>
 
 			<?php if ( trim( (string) get_the_content() ) ) : ?>
-				<div class="p10-content" style="margin-top:3rem;max-width:78ch"><?php the_content(); ?></div>
+				<div class="p10-content" style="margin-top:calc(var(--p10-fluid-space) * 3);max-width:78ch"><?php the_content(); ?></div>
 			<?php endif; ?>
 
 		</div>

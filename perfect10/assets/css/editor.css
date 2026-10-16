@@ -1,10 +1,15 @@
+/* These editor-only defaults mirror the frontend's bounded viewport scales. */
+.editor-styles-wrapper, .block-editor-block-styles {
+  --p10-fluid-type:clamp(1rem,calc(0.875rem + 0.138889vw),1.25rem);
+  --p10-fluid-space:clamp(0.75rem,1.111111vw,1.5rem);
+}
 /* Block editor styling — mirrors the front end so authors see what they get. */
 .editor-styles-wrapper,
 .block-editor-block-styles {
   background: #0b0a09;
   color: #f5f0e6;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
+  font-size: calc(var(--p10-fluid-type) * 1);
   font-weight: 300;
   line-height: 1.85;
 }
@@ -29,10 +34,10 @@
 
 .editor-styles-wrapper blockquote {
   border-left: 2px solid #d4af37;
-  padding-left: 1.6rem;
+  padding-left: calc(var(--p10-fluid-space) * 1.6);
   font-family: "Playfair Display", Georgia, serif;
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: calc(var(--p10-fluid-type) * 1.25);
   color: #f5f0e6;
 }
 
@@ -43,7 +48,7 @@
 
 .editor-styles-wrapper .p10-eyebrow {
   font-family: "Jost", "Inter", sans-serif;
-  font-size: 0.6875rem;
+  font-size: calc(var(--p10-fluid-type) * 0.6875);
   font-weight: 500;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -52,7 +57,7 @@
 
 .editor-styles-wrapper table th {
   font-family: "Jost", "Inter", sans-serif;
-  font-size: 0.625rem;
+  font-size: calc(var(--p10-fluid-type) * 0.625);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #d4af37;

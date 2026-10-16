@@ -29,7 +29,7 @@ while ( have_posts() ) :
 	</header>
 
 	<section class="p10-section p10-section--tight">
-		<div class="p10-shell" style="max-width:960px">
+		<div class="p10-shell">
 
 			<div class="p10-search__panel p10-reveal">
 				<?php p10_form_status( 'register' ); ?>
@@ -42,7 +42,7 @@ while ( have_posts() ) :
 			</div>
 
 			<?php if ( trim( (string) get_the_content() ) ) : ?>
-				<div class="p10-content" style="margin-top:2.5rem;max-width:74ch"><?php the_content(); ?></div>
+				<div class="p10-content" style="margin-top:calc(var(--p10-fluid-space) * 2.5);max-width:74ch"><?php the_content(); ?></div>
 			<?php endif; ?>
 
 		</div>

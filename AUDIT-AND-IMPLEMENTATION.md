@@ -1,3 +1,5 @@
+> **Historical audit:** This describes the earlier 2026-10-16 pass on another session branch. The current 2026-10-17 implementation, environment, tests and limitations are documented in [docs/UPGRADE-GUIDE.md](docs/UPGRADE-GUIDE.md). Its missing-feature statements below are historical, not current claims.
+
 # Repository audit and implementation plan
 
 Audit date: 2026-10-16. Working branch: `arena/547a52de-las10`.

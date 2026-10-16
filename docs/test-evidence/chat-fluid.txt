@@ -1,0 +1,11 @@
+PASS: desktop chatbot opens without contact fields and fits viewport
+PASS: desktop live REST-backed public profile retrieval
+PASS: follow-up consent prompt is optional and cancellable before any contacts are collected
+PASS: desktop reset, Escape and focus return
+PASS: tablet chatbot opens without contact fields and fits viewport
+PASS: tablet live REST-backed public profile retrieval
+PASS: tablet reset, Escape and focus return
+PASS: mobile chatbot opens without contact fields and fits viewport
+PASS: mobile live REST-backed public profile retrieval
+PASS: mobile reset, Escape and focus return
+PASS: no browser JavaScript page errors (Elementor disabled)

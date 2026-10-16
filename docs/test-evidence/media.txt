@@ -1,0 +1,9 @@
+PASS: Source gallery has ordered image identifiers
+PASS: Synthetic local fixture sideloaded for source ID 142
+PASS: Synthetic local fixture sideloaded for source ID 143
+PASS: Synthetic local fixture sideloaded for source ID 144
+PASS: Identical binary deduplicated by SHA-256; distinct image remains separate
+PASS: Media Library gallery uses source ordering and checksum deduplication
+PASS: Editor-changed gallery is not overwritten
+PASS: Unrelated source with same slug is not overwritten
+MEDIA TESTS FINISHED: SYNTHETIC colored JPEGs only, not source profile photos.

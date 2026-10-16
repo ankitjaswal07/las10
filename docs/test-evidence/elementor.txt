@@ -1,0 +1,25 @@
+PASS: Elementor Free loaded
+
+Deprecated: Automatic conversion of false to array is deprecated in /home/user/las10/.local/WordPress-6.8.3/wp-content/plugins/elementor-4.0.8/includes/api.php on line 176
+PASS: Registered real widget p10-profiles
+PASS: Widget controls registered p10-profiles
+PASS: Registered real widget p10-facts
+PASS: Widget controls registered p10-facts
+PASS: Registered real widget p10-gallery
+PASS: Widget controls registered p10-gallery
+PASS: Saved Elementor document recognized without post_content
+PASS: Elementor document selects unconstrained theme template
+PASS: Native Elementor content renders on frontend
+PASS: Only one classic header and footer
+PASS: No prose width wrapper around Elementor content
+PASS: Classic document not mistaken for Elementor
+PASS: Classic template remains when no document exists
+PASS: Editor support declared for page
+PASS: Editor support declared for p10_profile
+PASS: Editor support declared for p10_review
+PASS: Editor support declared for p10_package
+PASS: Dynamic widget renders actual public data: p10-profiles
+PASS: Dynamic profile cards remain visible after editor refresh
+PASS: Dynamic widget renders actual public data: p10-facts
+PASS: Dynamic widget renders actual public data: p10-gallery
+ELEMENTOR SERVER TESTS FINISHED. Source-only plugin lacks packaged JS/CSS/vendor assets; browser editor not verified.

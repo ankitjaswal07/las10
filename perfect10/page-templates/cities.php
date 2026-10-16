@@ -54,7 +54,7 @@ while ( have_posts() ) :
 				}
 				ksort( $grouped );
 				?>
-				<div class="p10-section-head" style="margin-top:3rem">
+				<div class="p10-section-head" style="margin-top:calc(var(--p10-fluid-space) * 3)">
 					<div class="p10-section-head__main">
 						<?php p10_section_eyebrow( '', $county->name ); ?>
 						<?php
@@ -94,7 +94,7 @@ while ( have_posts() ) :
 			<?php endforeach; ?>
 
 			<?php if ( trim( (string) get_the_content() ) ) : ?>
-				<div class="p10-content" style="margin-top:3rem;max-width:78ch"><?php the_content(); ?></div>
+				<div class="p10-content" style="margin-top:calc(var(--p10-fluid-space) * 3);max-width:78ch"><?php the_content(); ?></div>
 			<?php endif; ?>
 
 		</div>

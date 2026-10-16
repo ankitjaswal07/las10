@@ -17,6 +17,7 @@ $year       = gmdate( 'Y' );
 ?>
 </main><!-- #p10-main -->
 
+<?php if ( ! p10_elementor_location( 'footer' ) ) : ?>
 <footer class="p10-footer" role="contentinfo">
 	<div class="p10-shell">
 
@@ -163,6 +164,7 @@ $year       = gmdate( 'Y' );
 
 	</div>
 </footer>
+<?php endif; ?>
 
 <?php get_template_part( 'template-parts/concierge' ); ?>
 

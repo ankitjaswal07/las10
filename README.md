@@ -1,17 +1,28 @@
-# Perfect 10 WordPress theme
+# Las10s / Perfect 10 WordPress theme upgrade
 
-The installable theme source is in [`perfect10/`](perfect10/). The repository originally contained only `perfect10-fixed-v5.zip`; the archive has been extracted without removing the original package. See [`AUDIT-AND-IMPLEMENTATION.md`](AUDIT-AND-IMPLEMENTATION.md) for the audit findings, tested scope, blockers, and implementation plan.
+The existing theme is in [`perfect10/`](perfect10/), version **1.1.1**. Work is on **arena/5cd1cd5f-las10**. The original ZIP and two WordPress exports are retained.
 
-## Install
+## Start here
 
-Upload `perfect10/` as a theme directory (or zip that directory for WordPress), activate it, and visit **Perfect 10 → Setup & Import**. The importer is designed to add the theme's sample pages and records without overwriting existing content. Back up the site before importing into a populated production installation.
+- [Upgrade, Elementor, import, chatbot/provider and privacy guide](docs/UPGRADE-GUIDE.md)
+- [Source inventory: all 42 published profiles, 2 excluded drafts, 240 attachment records](docs/SOURCE-INVENTORY.md)
+- [Testing, evidence and known limitations](docs/TESTING.md)
+- [Disposable import mapping/outcomes — not a production import](docs/DISPOSABLE-IMPORT-REPORT.json)
+- Installable theme: `deliverables/perfect10-las10-upgrade-1.1.1.zip`
+- Pre-edit source backup: `backups/las10-before-upgrade.tar.gz`
 
-The current importer creates the sample data embedded in the theme; it does **not** contain 42 verified reference profiles or their complete authorized galleries. Do not treat sample records or stock imagery as source-site data. See the audit report before using imported demonstration content publicly.
+## Responsive layout update
 
-## Elementor
+Theme containers now have a **97vw maximum** on all breakpoints, without the old desktop pixel caps. Theme-owned fonts, margins, padding and gaps use bounded viewport-based scales. See [layout details and browser evidence](docs/RESPONSIVE-LAYOUT.md). No pull request has been created.
 
-The theme includes standard WordPress page templates and now declares Elementor theme support for Elementor Free. Elementor Free can edit ordinary pages and use its standard widgets; the theme's custom profile and location templates remain PHP-rendered dynamic templates. Elementor Pro Theme Builder and third-party dynamic-field widgets are not required or included.
+## Important boundaries
 
-## Privacy and external services
+Use staging and back up the **target database and uploads** before installing/importing. The new source importer is **Appearance → Authorized Source Import**, separate from the original sample-site importer. Confirm reuse rights before publication. No source photo binaries/archive were supplied; no source photos were downloaded or bundled. Missing photos remain labelled placeholders.
 
-The existing theme's public forms save inquiries in WordPress and may send notification email. Configure and test mail delivery with your host or a transactional mail provider. No AI chatbot or AI API integration is included. Do not put API credentials in frontend code or in the repository.
+Elementor Free PHP rendering and widget registration were exercised, but the packaged editor UI was unavailable. Existing homepage sections remain PHP/Customizer-driven pending an approved database-backed migration; this is **not** a claim that the entire site is Elementor-editable. Pro Theme Builder conditions were not tested with Pro.
+
+The floating launcher opens text chat, not a contact form. Local published-content retrieval is the default; optional server-side OpenAI relevance ranking requires separate provider configuration. Follow-up enquiries require consent and are disabled by default. Live provider, voice services and email delivery remain unverified.
+
+Static checks, disposable WordPress/SQLite import/re-import and security tests, synthetic media tests and desktop/tablet/mobile chatbot smoke tests are recorded under `docs/test-evidence/`. They are not a substitute for production MySQL, content authorization, visual regression, Elementor editor and licensed-Pro acceptance testing.
+
+The earlier [`AUDIT-AND-IMPLEMENTATION.md`](AUDIT-AND-IMPLEMENTATION.md) is a historical audit; the new guide supersedes its environment and outstanding-feature statements.

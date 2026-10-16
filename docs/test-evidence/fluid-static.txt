@@ -1,0 +1,3 @@
+PASS: PostCSS parsed 6 stylesheets; Node syntax-checked 4 scripts
+PASS: PHP syntax parsed for 68 theme files on 8.2.33
+PASS: responsive drawer retains parent and child destinations without rewriting the saved menu.

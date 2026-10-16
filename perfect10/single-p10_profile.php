@@ -112,21 +112,26 @@ while ( have_posts() ) :
 										</button>
 									<?php endforeach; ?>
 								</div>
-								<p class="p10-small" data-p10-gallery-count style="margin-top:.9rem">
+								<p class="p10-small" data-p10-gallery-count style="margin-top:calc(var(--p10-fluid-space) * 0.9)">
 									<?php echo esc_html( '1 / ' . count( $gallery ) ); ?>
 								</p>
 							<?php endif; ?>
 						</div>
+					<?php else : ?>
+						<figure class="p10-gallery">
+							<img src="<?php echo esc_url( P10_URI . 'assets/images/placeholder-profile.svg' ); ?>" alt="<?php esc_attr_e( 'Placeholder — profile photos unavailable', 'perfect10' ); ?>" width="900" height="1200">
+							<figcaption><?php esc_html_e( 'Photos unavailable — placeholder, not an imported gallery.', 'perfect10' ); ?></figcaption>
+						</figure>
 					<?php endif; ?>
 
 					<?php if ( p10_meta( $post, 'bio_heading' ) ) : ?>
-						<h2 class="p10-display-md" style="margin:2.4rem 0 1rem">
+						<h2 class="p10-display-md" style="margin:calc(var(--p10-fluid-space) * 2.4) 0 calc(var(--p10-fluid-space) * 1)">
 							<?php echo esc_html( p10_meta( $post, 'bio_heading' ) ); ?>
 						</h2>
 					<?php endif; ?>
 
 					<?php if ( p10_meta( $post, 'quote' ) ) : ?>
-						<blockquote style="margin:1.6rem 0 2rem;padding-left:1.5rem;border-left:2px solid var(--p10-gold);font-family:var(--p10-display);font-style:italic;font-size:1.25rem;line-height:1.6">
+						<blockquote style="margin:calc(var(--p10-fluid-space) * 1.6) 0 calc(var(--p10-fluid-space) * 2);padding-left:calc(var(--p10-fluid-space) * 1.5);border-left:2px solid var(--p10-gold);font-family:var(--p10-display);font-style:italic;font-size:calc(var(--p10-fluid-type) * 1.25);line-height:1.6">
 							<?php echo esc_html( p10_meta( $post, 'quote' ) ); ?>
 						</blockquote>
 					<?php endif; ?>
@@ -139,7 +144,7 @@ while ( have_posts() ) :
 					</div>
 
 					<?php if ( ! empty( $services ) ) : ?>
-						<div class="p10-panel" style="margin-top:1.8rem">
+						<div class="p10-panel" style="margin-top:calc(var(--p10-fluid-space) * 1.8)">
 							<h2 class="p10-panel__title"><?php esc_html_e( 'Services & Interests', 'perfect10' ); ?></h2>
 							<ul class="p10-chips">
 								<?php foreach ( $services as $service ) : ?>
@@ -150,7 +155,7 @@ while ( have_posts() ) :
 					<?php endif; ?>
 
 					<?php if ( ! empty( $specs ) ) : ?>
-						<div class="p10-panel" style="margin-top:1.2rem">
+						<div class="p10-panel" style="margin-top:calc(var(--p10-fluid-space) * 1.2)">
 							<h2 class="p10-panel__title"><?php esc_html_e( 'Profile Details', 'perfect10' ); ?></h2>
 							<table class="p10-spec">
 								<tbody>
@@ -176,7 +181,7 @@ while ( have_posts() ) :
 					<?php endif; ?>
 
 					<?php if ( p10_meta( $post, 'video_url' ) ) : ?>
-						<div class="p10-panel" style="margin-top:1.8rem">
+						<div class="p10-panel" style="margin-top:calc(var(--p10-fluid-space) * 1.8)">
 							<h2 class="p10-panel__title"><?php esc_html_e( 'Video', 'perfect10' ); ?></h2>
 							<?php echo wp_oembed_get( (string) p10_meta( $post, 'video_url' ) ); // phpcs:ignore WordPress.Security.EscapeOutput -- trusted oEmbed. ?>
 						</div>
@@ -219,7 +224,7 @@ while ( have_posts() ) :
 						</div>
 
 						<?php if ( ! empty( $flags ) ) : ?>
-							<ul class="p10-chips" style="margin-bottom:1.5rem">
+							<ul class="p10-chips" style="margin-bottom:calc(var(--p10-fluid-space) * 1.5)">
 								<?php foreach ( $flags as $flag ) : ?>
 									<li class="p10-chip"><?php echo esc_html( $flag ); ?></li>
 								<?php endforeach; ?>
@@ -227,12 +232,12 @@ while ( have_posts() ) :
 						<?php endif; ?>
 
 						<?php if ( $phone ) : ?>
-							<a class="p10-btn p10-btn--gold p10-btn--block" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $phone ) ); ?>" style="margin-bottom:.7rem">
+							<a class="p10-btn p10-btn--gold p10-btn--block" href="<?php echo esc_url( 'tel:' . preg_replace( '/[^0-9+]/', '', $phone ) ); ?>" style="margin-bottom:calc(var(--p10-fluid-space) * 0.7)">
 								<?php echo esc_html( $phone ); ?>
 							</a>
 						<?php endif; ?>
 
-						<a class="p10-btn p10-btn--ghost p10-btn--block" href="<?php echo esc_url( p10_utility_url( 'booking' ) ); ?>" style="margin-bottom:1.5rem">
+						<a class="p10-btn p10-btn--ghost p10-btn--block" href="<?php echo esc_url( p10_utility_url( 'booking' ) ); ?>" style="margin-bottom:calc(var(--p10-fluid-space) * 1.5)">
 							<?php esc_html_e( 'Reservation Form', 'perfect10' ); ?>
 						</a>
 
@@ -250,7 +255,7 @@ while ( have_posts() ) :
 						<?php endif; ?>
 
 						<?php if ( p10_meta( $post, 'contact_note' ) || p10_option( 'contact_note' ) ) : ?>
-							<p class="p10-form__hint" style="margin-top:1rem">
+							<p class="p10-form__hint" style="margin-top:calc(var(--p10-fluid-space) * 1)">
 								<?php echo esc_html( p10_meta( $post, 'contact_note', p10_option( 'contact_note', '' ) ) ); ?>
 							</p>
 						<?php endif; ?>

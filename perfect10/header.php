@@ -27,6 +27,7 @@ $logo_id = get_theme_mod( 'custom_logo' );
 
 <a class="p10-skip p10-sr" href="#p10-main"><?php esc_html_e( 'Skip to content', 'perfect10' ); ?></a>
 
+<?php if ( ! p10_elementor_location( 'header' ) ) : ?>
 <header
 	class="p10-header<?php echo $sticky ? '' : ' p10-header--static'; ?>"
 	<?php echo $sticky ? 'data-p10-header' : ''; ?>
@@ -93,7 +94,7 @@ $logo_id = get_theme_mod( 'custom_logo' );
 			$drawer_items = p10_drawer_items();
 			foreach ( $drawer_items as $i => $item ) :
 				?>
-				<li>
+				<li<?php echo ! empty( $item['child'] ) ? ' class="p10-drawer__subitem"' : ''; ?>>
 					<a href="<?php echo esc_url( $item['url'] ); ?>" data-num="<?php echo esc_attr( p10_number( $i + 1 ) ); ?>">
 						<?php echo esc_html( $item['label'] ); ?>
 					</a>
@@ -117,4 +118,5 @@ $logo_id = get_theme_mod( 'custom_logo' );
 	</div>
 </div>
 
+<?php endif; ?>
 <main id="p10-main" class="p10-main" role="main">

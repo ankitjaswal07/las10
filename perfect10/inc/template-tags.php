@@ -360,6 +360,7 @@ function p10_profile_location_line( $post = null ) {
  */
 function p10_availability_options() {
 	return apply_filters( 'p10_availability_options', array(
+		'unknown'   => __( 'Availability not verified', 'perfect10' ),
 		'available' => __( 'Available', 'perfect10' ),
 		'limited'   => __( 'Limited', 'perfect10' ),
 		'booked'    => __( 'Fully booked', 'perfect10' ),

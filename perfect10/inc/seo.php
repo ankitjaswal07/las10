@@ -353,13 +353,16 @@ function p10_meta_description() {
 	} elseif ( is_singular( 'p10_profile' ) ) {
 		$post        = get_queried_object();
 		$description = wp_strip_all_tags( get_the_excerpt( $post ) );
+		if ( get_post_meta( $post->ID, '_p10_source_key', true ) && get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true ) ) {
+			$description = wp_strip_all_tags( get_post_meta( $post->ID, '_yoast_wpseo_metadesc', true ) );
+		}
 		if ( ! $description ) {
 			$description = trim( get_the_title( $post ) . ' · ' . p10_profile_location_line( $post ) . ' · ' . p10_profile_stats_line( $post ) );
 		}
 	} elseif ( is_tax() ) {
 		$term        = get_queried_object();
 		$description = (string) p10_term_meta( $term, 'blurb', '' );
-		if ( ! $description ) {
+		if ( ! $description && ! get_term_meta( $term->term_id, '_p10_source_term', true ) ) {
 			/* translators: 1: term name, 2: brand. */
 			$description = sprintf( __( 'Browse verified companions in %1$s with %2$s.', 'perfect10' ), $term->name, p10_option( 'brand_name', '' ) );
 		}
@@ -458,3 +461,16 @@ function p10_document_title( $title ) {
 	return $title;
 }
 add_filter( 'document_title_parts', 'p10_document_title' );
+
+/** Preserve exported plain-text SEO titles without competing with SEO plugins. */
+function p10_source_document_title( $title ) {
+	if ( ! p10_seo_plugin_active() && is_singular( 'p10_profile' ) && get_post_meta( get_queried_object_id(), '_p10_source_key', true ) ) {
+		$source = get_post_meta( get_queried_object_id(), '_yoast_wpseo_title', true );
+		// Leave plugin-specific variables to the plugin instead of outputting raw tokens.
+		if ( $source && false === strpos( $source, '%%' ) ) {
+			return wp_strip_all_tags( $source );
+		}
+	}
+	return $title;
+}
+add_filter( 'pre_get_document_title', 'p10_source_document_title', 20 );
