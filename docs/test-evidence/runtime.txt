@@ -1,0 +1,155 @@
+PASS: Test administrator available
+PASS: Updated theme loaded
+PASS: Manifest counts verified
+PASS: 42 published source profiles imported
+PASS: Both drafts excluded
+PASS: Unrelated page preserved
+PASS: No attachment URL counted as imported media
+PASS: Private source notes excluded for profile 46
+PASS: Taxonomy relationships present for 46
+PASS: No invented live availability for 46
+PASS: Private source notes excluded for profile 45
+PASS: Taxonomy relationships present for 45
+PASS: No invented live availability for 45
+PASS: Private source notes excluded for profile 44
+PASS: Taxonomy relationships present for 44
+PASS: No invented live availability for 44
+PASS: Private source notes excluded for profile 43
+PASS: Taxonomy relationships present for 43
+PASS: No invented live availability for 43
+PASS: Private source notes excluded for profile 42
+PASS: Taxonomy relationships present for 42
+PASS: No invented live availability for 42
+PASS: Private source notes excluded for profile 41
+PASS: Taxonomy relationships present for 41
+PASS: No invented live availability for 41
+PASS: Private source notes excluded for profile 40
+PASS: Taxonomy relationships present for 40
+PASS: No invented live availability for 40
+PASS: Private source notes excluded for profile 39
+PASS: Taxonomy relationships present for 39
+PASS: No invented live availability for 39
+PASS: Private source notes excluded for profile 38
+PASS: Taxonomy relationships present for 38
+PASS: No invented live availability for 38
+PASS: Private source notes excluded for profile 24
+PASS: Taxonomy relationships present for 24
+PASS: No invented live availability for 24
+PASS: Private source notes excluded for profile 37
+PASS: Taxonomy relationships present for 37
+PASS: No invented live availability for 37
+PASS: Private source notes excluded for profile 36
+PASS: Taxonomy relationships present for 36
+PASS: No invented live availability for 36
+PASS: Private source notes excluded for profile 35
+PASS: Taxonomy relationships present for 35
+PASS: No invented live availability for 35
+PASS: Private source notes excluded for profile 34
+PASS: Taxonomy relationships present for 34
+PASS: No invented live availability for 34
+PASS: Private source notes excluded for profile 33
+PASS: Taxonomy relationships present for 33
+PASS: No invented live availability for 33
+PASS: Private source notes excluded for profile 32
+PASS: Taxonomy relationships present for 32
+PASS: No invented live availability for 32
+PASS: Private source notes excluded for profile 31
+PASS: Taxonomy relationships present for 31
+PASS: No invented live availability for 31
+PASS: Private source notes excluded for profile 30
+PASS: Taxonomy relationships present for 30
+PASS: No invented live availability for 30
+PASS: Private source notes excluded for profile 29
+PASS: Taxonomy relationships present for 29
+PASS: No invented live availability for 29
+PASS: Private source notes excluded for profile 28
+PASS: Taxonomy relationships present for 28
+PASS: No invented live availability for 28
+PASS: Private source notes excluded for profile 27
+PASS: Taxonomy relationships present for 27
+PASS: No invented live availability for 27
+PASS: Private source notes excluded for profile 26
+PASS: Taxonomy relationships present for 26
+PASS: No invented live availability for 26
+PASS: Private source notes excluded for profile 25
+PASS: Taxonomy relationships present for 25
+PASS: No invented live availability for 25
+PASS: Private source notes excluded for profile 23
+PASS: Taxonomy relationships present for 23
+PASS: No invented live availability for 23
+PASS: Private source notes excluded for profile 22
+PASS: Taxonomy relationships present for 22
+PASS: No invented live availability for 22
+PASS: Private source notes excluded for profile 21
+PASS: Taxonomy relationships present for 21
+PASS: No invented live availability for 21
+PASS: Private source notes excluded for profile 20
+PASS: Taxonomy relationships present for 20
+PASS: No invented live availability for 20
+PASS: Private source notes excluded for profile 19
+PASS: Taxonomy relationships present for 19
+PASS: No invented live availability for 19
+PASS: Private source notes excluded for profile 18
+PASS: Taxonomy relationships present for 18
+PASS: No invented live availability for 18
+PASS: Private source notes excluded for profile 17
+PASS: Taxonomy relationships present for 17
+PASS: No invented live availability for 17
+PASS: Private source notes excluded for profile 16
+PASS: Taxonomy relationships present for 16
+PASS: No invented live availability for 16
+PASS: Private source notes excluded for profile 15
+PASS: Taxonomy relationships present for 15
+PASS: No invented live availability for 15
+PASS: Private source notes excluded for profile 14
+PASS: Taxonomy relationships present for 14
+PASS: No invented live availability for 14
+PASS: Private source notes excluded for profile 13
+PASS: Taxonomy relationships present for 13
+PASS: No invented live availability for 13
+PASS: Private source notes excluded for profile 12
+PASS: Taxonomy relationships present for 12
+PASS: No invented live availability for 12
+PASS: Private source notes excluded for profile 11
+PASS: Taxonomy relationships present for 11
+PASS: No invented live availability for 11
+PASS: Private source notes excluded for profile 10
+PASS: Taxonomy relationships present for 10
+PASS: No invented live availability for 10
+PASS: Private source notes excluded for profile 9
+PASS: Taxonomy relationships present for 9
+PASS: No invented live availability for 9
+PASS: Private source notes excluded for profile 8
+PASS: Taxonomy relationships present for 8
+PASS: No invented live availability for 8
+PASS: Private source notes excluded for profile 7
+PASS: Taxonomy relationships present for 7
+PASS: No invented live availability for 7
+PASS: Private source notes excluded for profile 6
+PASS: Taxonomy relationships present for 6
+PASS: No invented live availability for 6
+PASS: Private source notes excluded for profile 5
+PASS: Taxonomy relationships present for 5
+PASS: No invented live availability for 5
+PASS: Re-import creates no duplicate profiles
+PASS: No failed profile records
+PASS: Retrieval excludes drafts, enquiries, passwords and private metadata
+PASS: Published profile is retrievable
+PASS: Location retrieval returns public term/profile links
+PASS: Editor cannot read or edit enquiries
+PASS: Importer denies editor
+PASS: Public endpoint rejects missing nonce
+PASS: Public endpoint rejects foreign origin
+PASS: Chat rejects array input
+PASS: Chat rejects oversized input
+PASS: Anonymous nonce-protected text chat works
+PASS: Assistant responses cannot be cached
+PASS: Follow-up without consent rejected
+PASS: String consent rejected (must be boolean)
+PASS: Old notice version rejected
+PASS: Enquiry saves while notification failure is accurately reported
+PASS: Only consented enquiry persisted
+PASS: Consent status, timestamp and notice version stored
+PASS: Privacy eraser deletes consented inquiry
+PASS: Rate limit returns HTTP 429
+RUNTIME TESTS FINISHED (disposable SQLite database, not production).

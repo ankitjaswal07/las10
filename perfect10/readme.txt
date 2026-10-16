@@ -140,3 +140,6 @@ to skip remote downloads entirely and use the bundled placeholders.
 
 = 1.0.0 =
 * Initial release.
+
+== 1.1.0 integration notes ==
+See demo/README.md and the repository docs/UPGRADE-GUIDE.md for the authorized-source batch importer, Elementor Free dynamic widgets/full-width template and website assistant setup. Do not confuse the new Appearance > Authorized Source Import with the original sample-site importer. Source photo binaries are not included. Local assistant retrieval is default; follow-up is opt-in and disabled until privacy setup. Elementor editor UI and real Pro conditions still require staging acceptance testing.

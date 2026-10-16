@@ -3111,3 +3111,11 @@ body.p10-theme { display: flex; flex-direction: column; min-height: 100vh; }
 .p10-footer__disclaimer{overflow-wrap:anywhere}
 @media(max-width:900px){.p10-footer__top{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.p10-footer__brand{grid-column:1/-1}}
 @media(max-width:560px){.p10-footer{padding-top:32px}.p10-footer__top{grid-template-columns:minmax(0,1fr);gap:1.6rem;padding-bottom:2rem}.p10-footer__brand{grid-column:auto}.p10-footer__mark{font-size:clamp(2.5rem,14vw,5rem);letter-spacing:.01em}.p10-footer__base{align-items:flex-start;flex-direction:column}}
+
+/* Elementor content owns its layout; classic PHP fallbacks keep their original wrappers. */
+.p10-editor-content { width:100%; max-width:none; }
+.p10-dynamic-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+@media(max-width:1024px) { .p10-dynamic-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:767px) { .p10-dynamic-grid { grid-template-columns:1fr; } }
+
+.p10-card__placeholder { position:absolute; bottom:.6rem; left:.6rem; right:.6rem; background:#0b0a09dd; color:var(--p10-cream); padding:.4rem; font-size:.75rem; text-align:center; }

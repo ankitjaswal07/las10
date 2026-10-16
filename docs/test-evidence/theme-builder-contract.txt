@@ -1,0 +1,5 @@
+PASS: No renderer match falls back to original PHP page
+PASS: Matched renderer replaces content exactly once
+PASS: No duplicate header around matched content
+PASS: 404 route can use native single location if dedicated 404 location is unsupported
+THEME BUILDER CONTRACT SIMULATION FINISHED. Actual Pro display conditions were NOT tested.

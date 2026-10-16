@@ -29,7 +29,9 @@ get_template_part( 'template-parts/marquee' );
  */
 while ( have_posts() ) :
 	the_post();
-	if ( trim( (string) get_the_content() ) ) :
+	if ( p10_elementor_document( get_the_ID() ) ) :
+		the_content();
+	elseif ( trim( (string) get_the_content() ) ) :
 		?>
 		<section class="p10-section p10-section--tight">
 			<div class="p10-shell">

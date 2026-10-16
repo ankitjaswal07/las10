@@ -51,7 +51,7 @@ function p10_run_demo_import( $scope = 'all' ) {
 	// Sideloads stock imagery for the hero, cities and profile types. This is
 	// the slow part of the import; it is skipped entirely when remote fetching
 	// is filtered off and degrades to the bundled placeholders.
-	if ( apply_filters( 'p10_demo_fetch_remote', true ) ) {
+	if ( apply_filters( 'p10_demo_fetch_remote', false ) ) {
 		p10_raise_time_limit();
 		p10_import_imagery();
 		$log[] = __( 'Stock imagery sideloaded (skipped where already set).', 'perfect10' );
@@ -838,7 +838,7 @@ function p10_import_profiles( $counties, $types, &$log ) {
  * @return int Attachment ID or 0.
  */
 function p10_import_fetch_image( $url, $name = '' ) {
-	if ( ! apply_filters( 'p10_demo_fetch_remote', true ) ) {
+	if ( ! apply_filters( 'p10_demo_fetch_remote', false ) ) {
 		return 0;
 	}
 

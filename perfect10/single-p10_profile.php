@@ -117,6 +117,11 @@ while ( have_posts() ) :
 								</p>
 							<?php endif; ?>
 						</div>
+					<?php else : ?>
+						<figure class="p10-gallery">
+							<img src="<?php echo esc_url( P10_URI . 'assets/images/placeholder-profile.svg' ); ?>" alt="<?php esc_attr_e( 'Placeholder — profile photos unavailable', 'perfect10' ); ?>" width="900" height="1200">
+							<figcaption><?php esc_html_e( 'Photos unavailable — placeholder, not an imported gallery.', 'perfect10' ); ?></figcaption>
+						</figure>
 					<?php endif; ?>
 
 					<?php if ( p10_meta( $post, 'bio_heading' ) ) : ?>

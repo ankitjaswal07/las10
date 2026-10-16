@@ -1,0 +1,5 @@
+PASS: Provider request redacts an email and contains no full transcript
+PASS: Invalid provider IDs discarded in favor of local facts
+PASS: Provider-generated text never becomes an answer
+PASS: Provider error safely falls back to local extracts
+PROVIDER CONTRACT TESTS FINISHED: mock HTTP only, no billable calls.

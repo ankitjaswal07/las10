@@ -95,9 +95,12 @@ function p10_register_post_types() {
 		'menu_position'   => 24,
 		'menu_icon'       => 'dashicons-email-alt',
 		'supports'        => array( 'title', 'editor', 'custom-fields' ),
+		'show_in_rest'    => false,
+		'publicly_queryable' => false,
+		'exclude_from_search' => true,
 		'capability_type' => 'post',
-		'capabilities'    => array( 'create_posts' => 'do_not_allow' ),
-		'map_meta_cap'    => true,
+		'capabilities'    => array_fill_keys( array( 'edit_post', 'read_post', 'delete_post', 'edit_posts', 'edit_others_posts', 'publish_posts', 'read_private_posts', 'delete_posts', 'delete_private_posts', 'delete_published_posts', 'delete_others_posts', 'edit_private_posts', 'edit_published_posts', 'create_posts' ), 'manage_options' ),
+		'map_meta_cap'    => false, // All enquiry capabilities are the administrator primitive, not post meta caps.
 	) );
 }
 add_action( 'init', 'p10_register_post_types', 5 );

@@ -89,6 +89,7 @@ function p10_profile_field_schema() {
 			'group'   => 'status',
 			'default' => 'available',
 			'options' => array(
+				'unknown'     => __( 'Availability not verified', 'perfect10' ),
 				'available'   => __( 'Available', 'perfect10' ),
 				'limited'     => __( 'Limited availability', 'perfect10' ),
 				'booked'      => __( 'Fully booked', 'perfect10' ),

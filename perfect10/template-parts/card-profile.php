@@ -59,6 +59,9 @@ if ( $reveal ) {
 				decoding="async"
 				width="900"
 				height="1200">
+			<?php if ( ! has_post_thumbnail( $profile ) ) : ?>
+				<span class="p10-card__placeholder"><?php esc_html_e( 'Photo unavailable · placeholder', 'perfect10' ); ?></span>
+			<?php endif; ?>
 		</div>
 	</a>
 

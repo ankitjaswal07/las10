@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'P10_VERSION', '1.0.0' );
+define( 'P10_VERSION', '1.1.0' );
 define( 'P10_DIR', trailingslashit( get_template_directory() ) );
 define( 'P10_URI', trailingslashit( get_template_directory_uri() ) );
 
@@ -25,7 +25,7 @@ function p10_require( $file ) {
 	}
 }
 
-p10_require( 'locations.php' );
+// Location data is loaded lazily by p10_locations_dataset(), after translations initialize.
 p10_require( 'setup.php' );
 p10_require( 'post-types.php' );
 p10_require( 'meta.php' );
@@ -41,6 +41,9 @@ p10_require( 'seo.php' );
 p10_require( 'shortcodes.php' );
 p10_require( 'widgets.php' );
 p10_require( 'demo-content.php' );
+p10_require( 'elementor.php' );
+p10_require( 'source-import.php' );
+p10_require( 'chatbot.php' );
 
 if ( is_admin() ) {
 	p10_require( 'admin.php' );
